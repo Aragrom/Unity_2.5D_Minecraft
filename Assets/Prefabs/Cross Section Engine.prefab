@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4368172263168324117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4368172263168324116}
+  - component: {fileID: 7969759788322074359}
+  - component: {fileID: 9137404690399194367}
+  - component: {fileID: 1722065063}
+  - component: {fileID: 4149101358380167876}
+  m_Layer: 0
+  m_Name: Cross Section Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4368172263168324116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368172263168324117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7969759788322074359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368172263168324117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5507d14e28d8649ad5befcdac37ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  crossSectionPool: {fileID: 0}
+  rawCrossSectionData: {fileID: 0}
+  on: 0
+  setUp: 0
+  isGenerating: 0
+--- !u!114 &9137404690399194367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368172263168324117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48d1e37bade13d4c8039190902e294a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1722065063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368172263168324117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822f22550bfbd734d9acdadaf2efd824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crossSectionEngine: {fileID: 0}
+  chunkCrossSectionPrefab: {fileID: 7356411243149184512, guid: 60e33fe0e6993744fb8d78a0e8dff5a8,
+    type: 3}
+  subMapPosition: {x: -128, y: 0}
+  defaultMapSize: 512
+  idCounter: 0
+--- !u!114 &4149101358380167876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368172263168324117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e04bafc827bee49bc52bbf6831929d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vertices: []
+  uvs: []
+  position: {x: 0, y: 0}

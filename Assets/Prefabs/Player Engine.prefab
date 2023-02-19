@@ -1,0 +1,296 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3022432887595370246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8903999052853954073}
+  - component: {fileID: 3937648924385565616}
+  - component: {fileID: 1542354260103370888}
+  - component: {fileID: 7134784666913802224}
+  - component: {fileID: 18886526}
+  - component: {fileID: 9032956196413888310}
+  - component: {fileID: 3733786704010539060}
+  - component: {fileID: 2191667771099277149}
+  - component: {fileID: 1643796443}
+  - component: {fileID: 1643796436}
+  - component: {fileID: 1643796437}
+  - component: {fileID: 18886514}
+  m_Layer: 0
+  m_Name: Player Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8903999052853954073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3937648924385565616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be72201018ee3d4d812c82d7dc66b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  inputEngine: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  playerRotation: {fileID: 0}
+  playerAddRemoveBlocks: {fileID: 0}
+  playerCombat: {fileID: 0}
+  playerCollision: {fileID: 0}
+  Ground:
+    serializedVersion: 2
+    m_Bits: 1
+--- !u!114 &1542354260103370888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7301ae233b5934eaf246020a3e7e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEngine: {fileID: 0}
+  player: {fileID: 0}
+  characterController: {fileID: 0}
+  chunkPosition: {x: 0, y: 0, z: 0}
+  positionInChunk: {x: 0, y: 0, z: 0}
+  collisionFlags: 0
+  isGrounded: 0
+  wasGrounded: 0
+  hasJustJumped: 1
+  delayedJumpPossible: 0
+  delayedJumpTimer: 0
+  DELAYED_JUMP_DURATION: 0.06666667
+  defaultSpeed: 10
+  walkSpeed: 10
+  runSpeed: 20
+  maxSpeed: 30
+  defaultAirSpeed: 5
+  velocity: {x: 0, y: 0}
+  rotatedVelocity: {x: 0, y: 0, z: 0}
+  jump: 12
+  jumpAcceleration: 20
+  gravity: 32
+  stayGroundedForce: 5
+  friction: 2.5
+  stopThreshold: 0.01
+  pixelsPerUnit: 16
+  boost: 0.125
+  lastHeight: 0
+  pixelSize: 0.125
+--- !u!114 &7134784666913802224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2639461664c41c74e8b5dfc13d9c8dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  sprite: {fileID: 0}
+  walkSpeedModifier: 0.25
+  idleSpriteSheet: {fileID: 2800000, guid: a9925dd7305719f4e95fd20e1bf91f2a, type: 3}
+  walkSpriteSheet: {fileID: 2800000, guid: 866cda9b9045cec4380c27c30bbfaa2f, type: 3}
+  runSpriteSheet: {fileID: 2800000, guid: f5c2c3f9dee14534983a7b3f8fff9bc4, type: 3}
+  jumpSpriteSheet: {fileID: 2800000, guid: 842fe4343c8745f439022b09ab05fe12, type: 3}
+  slideSpriteSheet: {fileID: 2800000, guid: d5f935c950b1b224babc84ea5694c898, type: 3}
+  idleNormalMapSpriteSheet: {fileID: 2800000, guid: 47fb5e79903436f4797311e3fe5e7c07,
+    type: 3}
+  walkNormalMapSpriteSheet: {fileID: 2800000, guid: 96154094cfd0d2a43b0ebf5189a28b85,
+    type: 3}
+  runNormalMapSpriteSheet: {fileID: 2800000, guid: 339001659d6820b40944663d92ac2faf,
+    type: 3}
+  jumpNormalMapSpriteSheet: {fileID: 2800000, guid: 0bba81f733f7cba43824847c536d6005,
+    type: 3}
+  slideNormalMapSpriteSheet: {fileID: 2800000, guid: fe106c093dd88d54e86cbe0afcb5988a,
+    type: 3}
+  clipName: 
+--- !u!114 &18886526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464d7a623a72de43ba3f37398e174a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  characterSprite: {fileID: 0}
+  eyeSprite: {fileID: 0}
+  hairSprite: {fileID: 0}
+  eyeBrowSprite: {fileID: 0}
+  eyeBackgroundSprite: {fileID: 0}
+  beardSprite: {fileID: 0}
+  moustacheSprite: {fileID: 0}
+  sideOverride: {fileID: 22100000, guid: eb5269803c0c3704fa43d00e95b7d589, type: 2}
+  frontOverride: {fileID: 22100000, guid: 42ad11c2d28a9214ba18fd179314fce4, type: 2}
+  backOverride: {fileID: 22100000, guid: 68ec160840b09f7428eae0c7825f7ab0, type: 2}
+  playerAnimation: {fileID: 7134784666913802224}
+  facing: 0
+  spriteRenderer: {fileID: 0}
+  sprite: {fileID: 0}
+  head: {fileID: 0}
+  eyes: {fileID: 0}
+  eyeBrows: {fileID: 0}
+  eyeBackground: {fileID: 0}
+  clipName: 
+  currentFrameNumber: 0
+  totalTime: 0
+  time: 0
+--- !u!114 &9032956196413888310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0133f36d12e8ccf4e8f97d8a0a1e58a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEngine: {fileID: 0}
+  player: {fileID: 0}
+  rotationInY: 0
+  direction: 0
+  speed: 10
+  isRotating: 0
+  isRotatingClockWise: 0
+  targetAngle: {x: 0, y: 0, z: 0}
+  currentAngle: {x: 0, y: 0, z: 0}
+  tmpTextCardinalDirection: {fileID: 0}
+  north: north
+  south: south
+  east: east
+  west: west
+--- !u!114 &3733786704010539060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1686a00357379da43aafb6ac8c7145f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2191667771099277149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb26d33cd30e3c74c87f6d8737bfc9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifiedBlockQueue: {fileID: 0}
+  hasBlock: 0
+  addBlock: 0
+  removeBlock: 0
+  digPlaceDirection: {x: 0, y: 0, z: 0}
+  actorPositionDebugging: {x: 0, y: 0, z: 0}
+  subChunkPositionDebugging: {x: 0, y: 0, z: 0}
+  selectedChunkForTesting: {fileID: 0}
+--- !u!114 &1643796443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0dad3f7bce05040b40c87cfbd94c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1643796436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f9785bb21facc4c95df6715f6104c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RESET_TIME: 1
+  timer: 1
+  playerRotation: {fileID: 9032956196413888310}
+  characterController: {fileID: 0}
+  player: {fileID: 0}
+  oldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1643796437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc76b913d93446468e2d9ef3570846b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputEngine: {fileID: 0}
+  playerRotation: {fileID: 9032956196413888310}
+  AUTO_RESET_TIMER: 30
+  autoRotateTimer: 30
+--- !u!114 &18886514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022432887595370246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebca7a7a8ff3e7a41aa8c9dac855965c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MAX_HEALTH: 50
+  health: 0
+  MAX_MANA: 0
+  mana: 0
+  MAX_STAMINA: 0
+  stamina: 0

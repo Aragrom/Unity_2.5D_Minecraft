@@ -1,0 +1,311 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5324126139038350372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5324126139038350369}
+  - component: {fileID: 5324126139038350370}
+  - component: {fileID: 4819295720098471942}
+  - component: {fileID: 9006234133718993598}
+  - component: {fileID: 2840544455853730732}
+  - component: {fileID: 6616901133159728557}
+  - component: {fileID: 5324126139038350371}
+  - component: {fileID: 8606567817232711247}
+  - component: {fileID: 8394255257965716549}
+  - component: {fileID: 7540318097558912817}
+  - component: {fileID: 5324126139038350368}
+  - component: {fileID: 916654396}
+  - component: {fileID: 916654404}
+  m_Layer: 0
+  m_Name: Block Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5324126139038350369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5324126139038350370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab0a944d19a9c648800c8c063dbea68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 0}
+  blockEngineOptions: {fileID: 0}
+  on: 0
+  setUp: 0
+  checkingForNewChunks: 0
+  assignMeshCoroutineRunning: 0
+  blockPool: {fileID: 0}
+  newBlockQueue: {fileID: 0}
+  modifiedBlockQueue: {fileID: 0}
+  rawSubChunkData: {fileID: 0}
+  heightMap: {fileID: 0}
+  shapeMap: {fileID: 0}
+  wormMap: {fileID: 0}
+  lightMap: {fileID: 0}
+  blockMap: {fileID: 0}
+  blockPathing: {fileID: 0}
+  subChunkMaterial: {fileID: 2100000, guid: 8769d076a15704e4a8f0c1e1378c7d27, type: 2}
+  terrain: {fileID: 0}
+--- !u!114 &4819295720098471942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421dd7244abbf9f4dbeee1e7dfcc1470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunkPrefab: {fileID: 7536717348432201843, guid: 6e59dd19b0a946242b3443855d3db211,
+    type: 3}
+  subMapPosition: {x: -256, y: -256}
+  savedSubMapPositon: {x: 0, y: 0}
+  defaultMapSize: 512
+  SUB_MAP_SIZE: 16
+  MAX_SIZE: 32
+  MIN_SIZE: 16
+  size: 32
+  idCounter: 0
+  oldBoundary:
+    serializedVersion: 2
+    x: -256
+    y: -256
+    width: 240
+    height: 240
+  boundary:
+    serializedVersion: 2
+    x: -256
+    y: -256
+    width: 240
+    height: 240
+  isAddingNewChunks: 0
+  needNewChunk: []
+--- !u!114 &9006234133718993598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5ba3e9fc080f046911526241e3143a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipShapeMap: 0
+  isSettingMesh: 
+  tempPosition3: {x: 0, y: 0, z: 0}
+  tempNorthPosition3: {x: 0, y: 0, z: 0}
+  tempSouthPosition3: {x: 0, y: 0, z: 0}
+  tempEastPosition3: {x: 0, y: 0, z: 0}
+  tempWestPosition3: {x: 0, y: 0, z: 0}
+  tempAbovePosition3: {x: 0, y: 0, z: 0}
+  tempBelowPosition3: {x: 0, y: 0, z: 0}
+  tempPosition2: {x: 0, y: 0}
+  tempNorthPosition: {x: 0, y: 0}
+  tempSouthPosition: {x: 0, y: 0}
+  tempEastPosition: {x: 0, y: 0}
+  tempWestPosition: {x: 0, y: 0}
+  tempNorthEastPosition: {x: 0, y: 0}
+  tempSouthEastPosition: {x: 0, y: 0}
+  tempSouthWestPosition: {x: 0, y: 0}
+  tempNorthWestPosition: {x: 0, y: 0}
+--- !u!114 &2840544455853730732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb20ff2dd2b5724da5a3fd699a9ddef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6616901133159728557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71c5455681bd1144b2ba9189b74e165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vertices: []
+  uvs: []
+  uvs2: []
+  position: {x: 0, y: 0}
+  blockMapWidth: 16
+  widthOfBlockOnMap: 0.00390625
+  jobActive: 0
+--- !u!114 &5324126139038350371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8949c0de4a5956a4aaab6268ecf821d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMapSize: 544
+  SUB_MAP_SIZE: 16
+  offset:
+    x: 0
+    y: 0
+  secondSampleOffset:
+    x: 1000
+    y: 1000
+  noiseFilter: 0.005
+--- !u!114 &8606567817232711247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb269c8285907ed4aa1f8e897f640a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockEngine: {fileID: 0}
+  threshold: 0
+  noiseFilter:
+    x: 0.04
+    y: 0.04
+  defaultMapSize: 512
+  COLUMN_BLOCK_HEIGHT: 256
+  SUB_CHUNKS_PER_CHUNK: 32
+  SUB_CHUNK_SIZE: 16
+  SUB_CHUNK_HEIGHT: 16
+  xy: 0
+  xz: 0
+  yz: 0
+  yx: 0
+  zx: 0
+  zy: 0
+  offset:
+    x: 100
+    y: 100
+    z: 100
+  secondOffset:
+    x: 1000
+    y: 1000
+    z: 1000
+  results: 
+  tempResult: 0
+--- !u!114 &8394255257965716549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d957e31142ca5468b7ace5712d5a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7540318097558912817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d4ed3c36438ea448c6d28b1169ca8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockEngine: {fileID: 0}
+--- !u!114 &5324126139038350368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49639108c2427274493a5b1d35114077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockEngine: {fileID: 0}
+  subMapPosition: {x: -256, y: 0, z: -256}
+  isProcessingChunk: 0
+  depth: 0
+  defaultMapSize: 512
+  COLUMN_BLOCK_HEIGHT: 1024
+  SUB_CHUNKS_PER_CHUNK: 64
+  SUB_CHUNK_SIZE: 16
+  SUB_CHUNK_HEIGHT: 8
+--- !u!114 &916654396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfff33cbb540fcf42bac05102c20ed55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockMap1024: {fileID: 0}
+  blockMap512: {fileID: 0}
+  blockMap256: {fileID: 2800000, guid: 1531e22116080be4b98304fc0d5c82c9, type: 3}
+  blockMap128: {fileID: 2800000, guid: bd0d75811bea8f24f93766f4798c7647, type: 3}
+  blockMap64: {fileID: 2800000, guid: 14bcd132bf5d4744b8327348cdc7b793, type: 3}
+--- !u!114 &916654404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324126139038350372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8daf02176ab33b24c9f8459f6833d160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerSave: 0
+  triggerLoad: 0
+  loadedChunkData:
+    y: 
+    triangles: 
+    uvs: []
